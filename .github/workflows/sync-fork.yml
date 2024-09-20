@@ -11,12 +11,9 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Sync Fork Action
-      uses: XueMoMo/Sync-Fork-action@v1.0.6
-      with:
-        upstream_repository: 'upstream-owner/repo-name'
-        upstream_branch: main
-        target_branch: main
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: gh repo sync

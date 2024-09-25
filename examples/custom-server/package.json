@@ -27,7 +27,7 @@
     "escape-html": "^1.0.3",
     "express": "^4.19.2",
     "next": "^14.1.1",
-    "payload": "latest",
+    "payload": "2.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
